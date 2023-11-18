@@ -1,0 +1,20 @@
+name: "Setup PHP with Composer deps"
+
+inputs:
+    os:
+        description: 'OS version'
+        required: true
+    php:
+        description: 'PHP version'
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - name: Setup PHP
+          uses: ./.github/composite-actions/setup-php
+          with:
+              version: ${{ inputs.php }}
+
+        - name: Install Composer deps
+          uses: ./.github/composite-actions/install-composer-deps

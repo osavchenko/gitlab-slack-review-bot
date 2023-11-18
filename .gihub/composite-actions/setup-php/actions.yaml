@@ -1,0 +1,16 @@
+name: "Setup PHP"
+
+inputs:
+    version:
+        description: 'PHP version'
+        required: true
+
+runs:
+    using: "composite"
+    steps:
+        - name: Setup PHP
+          uses: shivammathur/setup-php@v2
+          with:
+              php-version: ${{ inputs.version }}
+              tools: composer
+              extensions: none, ctype, curl, dom, json, iconv, mbstring, opcache, openssl, simplexml, tokenizer, xml, xmlwriter, zip
