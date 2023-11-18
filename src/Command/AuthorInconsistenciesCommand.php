@@ -48,4 +48,3 @@ class AuthorInconsistenciesCommand extends Command
         return 0;
     }
 }
-

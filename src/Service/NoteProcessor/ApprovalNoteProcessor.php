@@ -48,7 +48,6 @@ class ApprovalNoteProcessor extends AbstractNoteProcessor implements NoteProcess
 
             $this->processReview($review, $comment);
             $connection->commit();
-
         } catch (Exception $exception) {
             $this->logger->error('Error, rollbacking transaction', ['exception' => $exception]);
             $connection->rollBack();
@@ -59,16 +58,19 @@ class ApprovalNoteProcessor extends AbstractNoteProcessor implements NoteProcess
     {
         if ($review->getStatus() === Status::COMPLETED) {
             $this->logger->warning('Merge request already completed', ['review' => $review->getId()]);
+
             return;
         }
 
         if ($this->doesCommentBelongToMergeRequestAuthor($comment, $review)) {
             $this->logger->warning('Comment belongs to MR author', ['review' => $review->getId()]);
+
             return;
         }
 
         if ($this->hasAlreadyApproved($comment, $review)) {
             $this->logger->warning('MR already approved', ['review' => $review->getId()]);
+
             return;
         }
 

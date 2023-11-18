@@ -138,7 +138,6 @@ class ChatService
                     'text' => $text,
                 ]
             );
-
         } catch (Exception $exception) {
             $this->logger->error('Failed to publish to slack', ['exception' => $exception]);
         }
