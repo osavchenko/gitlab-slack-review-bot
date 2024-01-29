@@ -4,11 +4,8 @@ declare(strict_types=1);
 
 namespace App\Service\NoteProcessor;
 
-use App\Constant\Review\Status as ReviewStatus;
 use App\Entity\Comment;
-use App\Entity\Review;
 use App\Service\ChatService;
-use App\Service\GitlabService;
 use App\Service\ReviewService;
 use App\Service\ScopeService;
 

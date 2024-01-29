@@ -197,6 +197,4 @@ class MergeRequest
 
         return $this;
     }
-
-
 }

@@ -10,7 +10,6 @@ use App\Entity\MergeRequest;
 
 class MergeRequestStatusChangeProcessor implements MergeRequestProcessorInterface
 {
-
     public function supports(MergeRequest $mergeRequest): bool
     {
         return $mergeRequest->getState() === State::MERGED;

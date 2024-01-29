@@ -36,5 +36,4 @@ class RequestLogEventListener implements EventSubscriberInterface
 
         $this->requestLogService->log($method, $headers, $body);
     }
-
 }

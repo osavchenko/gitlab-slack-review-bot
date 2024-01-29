@@ -80,7 +80,6 @@ class ReviewService
         return $review;
     }
 
-
     public function createByMergeRequest(MergeRequest $mergeRequest): Review
     {
         $review = new Review();
@@ -134,6 +133,7 @@ class ReviewService
         $scopeName = $review->getScope();
         if (!$scopeName) {
             $this->logger->warning('Scope is not defined for review', ['review' => $review->getId()]);
+
             return;
         }
 
@@ -150,6 +150,7 @@ class ReviewService
     {
         if ($comment->getAuthor()->getUsername() === SystemUser::NAME) {
             $this->logger->debug('Skipping ping from the system user');
+
             return;
         }
 

@@ -25,7 +25,6 @@ class ScopeRepository extends ServiceEntityRepository
             ->createQueryBuilder('s')
             ->orderBy('length(s.name)', 'desc')
             ->getQuery()
-            ->getResult()
-            ;
+            ->getResult();
     }
 }

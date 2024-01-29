@@ -1,0 +1,25 @@
+name: "Install Composer deps"
+
+runs:
+    using: "composite"
+    steps:
+        - name: Get Composer cache params
+          shell: bash
+          run: |
+              echo "COMPOSER_CACHE_DIR=$(composer config cache-dir)" >> $GITHUB_ENV
+
+        - name: Cache Composer dependencies
+          uses: actions/cache@v3
+          with:
+              path: ${{ env.COMPOSER_CACHE_DIR }}
+              key: Composer-${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+
+        - name: Install dependencies
+          uses: nick-invision/retry@v2
+          with:
+              timeout_minutes: 5
+              max_attempts: 5
+              retry_wait_seconds: 30
+              # `--no-scripts` to avoid side-effects (e.g. installing dev-tools for all jobs on CI level),
+              # all executed scripts should be explicit and run only when needed.
+              command: composer install --no-scripts

@@ -6,8 +6,6 @@ namespace App\Command;
 
 use App\Factory\ScopeFactory;
 use App\Repository\ScopeRepository;
-use App\Service\ReviewService;
-use App\Service\ScopeService;
 use Doctrine\ORM\EntityManagerInterface;
 use RuntimeException;
 use Symfony\Component\Console\Command\Command;

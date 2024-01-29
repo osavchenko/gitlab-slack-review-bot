@@ -43,7 +43,6 @@ class MergeRequestService
     }
 
     /**
-     * @param string $reviewStatus
      * @return iterable|MergeRequest[]
      */
     public function findByReviewStatus(string $reviewStatus): iterable

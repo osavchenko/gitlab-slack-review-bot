@@ -17,6 +17,5 @@ class GroupService
 
     public function fetchReviewGroups()
     {
-
     }
 }

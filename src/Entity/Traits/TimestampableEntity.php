@@ -5,18 +5,19 @@ declare(strict_types=1);
 namespace App\Entity\Traits;
 
 use DateTime;
+use Doctrine\ORM\Mapping as ORM;
 
 trait TimestampableEntity
 {
     /**
-     * @var DateTime $created
+     * @var DateTime
      *
      * @ORM\Column(type="datetime")
      */
     private $createdAt;
 
     /**
-     * @var DateTime $updatedAt
+     * @var DateTime
      *
      * @ORM\Column(type="datetime")
      */

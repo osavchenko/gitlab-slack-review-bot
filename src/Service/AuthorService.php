@@ -87,6 +87,7 @@ class AuthorService
         $group = $this->fetchGroupByScope($scope);
         if ($group === null) {
             $this->logger->error('Could not find group by scope', ['scope' => $scope]);
+
             return [];
         }
 
@@ -100,6 +101,7 @@ class AuthorService
         $group = $this->fetchGroupByScope($scope);
         if ($group === null) {
             $this->logger->error('Could not find group by scope', ['scope' => $scope]);
+
             return;
         }
 

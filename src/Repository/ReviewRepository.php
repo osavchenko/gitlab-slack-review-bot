@@ -22,7 +22,6 @@ class ReviewRepository extends ServiceEntityRepository
     }
 
     /**
-     * @param string $reviewStatus
      * @return iterable|Review[]
      */
     public function findReadyReviews(Scope $scope, int $neededNumberOfReviewers): iterable

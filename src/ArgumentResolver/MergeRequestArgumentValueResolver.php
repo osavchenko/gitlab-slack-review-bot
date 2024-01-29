@@ -81,6 +81,7 @@ class MergeRequestArgumentValueResolver implements ArgumentValueResolverInterfac
 
         $mergeRequest->setProject($project);
     }
+
     protected function setAuthor(Request $request, MergeRequest $mergeRequest): void
     {
         /** @var EventObjectAttributes $eventObjectAttributes */

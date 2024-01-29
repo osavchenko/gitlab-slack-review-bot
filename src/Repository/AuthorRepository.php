@@ -50,8 +50,7 @@ class AuthorRepository extends ServiceEntityRepository
             ->leftJoin('a.authorBlacklist', 'ab')
             ->where('ab is NOT NULL')
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
 
         array_push(
             $ignoredAuthors,

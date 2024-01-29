@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace App\Service\NoteProcessor;
 
-use App\Constant\Note\Approval;
-use App\Constant\Review\Status;
 use App\Entity\Comment;
-use App\Entity\Review;
 use App\Service\ReviewService;
 
 class PingAuthorNoteProcessor extends AbstractNoteProcessor implements NoteProcessorInterface

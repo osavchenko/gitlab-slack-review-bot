@@ -6,10 +6,8 @@ namespace App\Service;
 
 use App\Entity\Author;
 use App\Entity\Comment;
-use App\Entity\MergeRequest;
 use App\Entity\Project;
 use App\Entity\Review;
-use App\Entity\Scope;
 use Exception;
 use Gitlab\Client;
 use Psr\Log\LoggerInterface;
@@ -104,10 +102,9 @@ class GitlabService
 
     public function findAllGroupsByName(string $groupName): iterable
     {
-
         $page = 1;
 
-        do {
+        while (true) {
             $groups = $this->client->groups()->all(
                 [
                     'search' => $groupName,
@@ -121,6 +118,6 @@ class GitlabService
 
             yield from $groups;
             $page++;
-        } while (true);
+        }
     }
 }
