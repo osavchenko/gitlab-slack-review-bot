@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<phpmd-baseline>
+  <violation rule="PHPMD\Rule\Naming\LongVariable" file="src/ArgumentResolver/CommentArgumentValueResolver.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/ArgumentResolver/CommentArgumentValueResolver.php"/>
+  <violation rule="PHPMD\Rule\Naming\LongVariable" file="src/ArgumentResolver/MergeRequestArgumentValueResolver.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/ArgumentResolver/MergeRequestArgumentValueResolver.php"/>
+  <violation rule="PHPMD\Rule\Naming\LongClassName" file="src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Command/AuthorBlacklistSyncCommand.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Command/AuthorInconsistenciesCommand.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Command/AuthorSyncCommand.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Command/ProjectSetupCommand.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Command/WebhookCreateCommand.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Doctrine/RandFunction.php"/>
+  <violation rule="PHPMD\Rule\CleanCode\IfStatementAssignment" file="src/Kernel.php" method="configureContainer"/>
+  <violation rule="PHPMD\Rule\CleanCode\IfStatementAssignment" file="src/Kernel.php" method="configureRoutes"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20200716155718.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20200731111203.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20200803071705.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20200810071619.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20200817144518.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20200903111544.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20201029114253.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20210426111111.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20211018073228.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Migrations/Version20231018201123.php"/>
+  <violation rule="PHPMD\Rule\Design\EmptyCatchBlock" file="src/Service/ChatService.php"/>
+  <violation rule="PHPMD\Rule\UnusedFormalParameter" file="src/Service/NoteProcessor/AbstractNoteProcessor.php"/>
+</phpmd-baseline>

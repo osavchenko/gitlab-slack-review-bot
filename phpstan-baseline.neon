@@ -1,0 +1,1261 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Method App\\ArgumentResolver\\CommentArgumentValueResolver\:\:resolve\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/ArgumentResolver/CommentArgumentValueResolver.php
+
+		-
+			message: '#^Property App\\ArgumentResolver\\CommentArgumentValueResolver\:\:\$entityArgumentValueResolverHelper has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/ArgumentResolver/CommentArgumentValueResolver.php
+
+		-
+			message: '#^Property App\\ArgumentResolver\\CommentArgumentValueResolver\:\:\$serializer has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/ArgumentResolver/CommentArgumentValueResolver.php
+
+		-
+			message: '#^Method App\\ArgumentResolver\\MergeRequestArgumentValueResolver\:\:resolve\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/ArgumentResolver/MergeRequestArgumentValueResolver.php
+
+		-
+			message: '#^Property App\\ArgumentResolver\\MergeRequestArgumentValueResolver\:\:\$entityArgumentValueResolverHelper has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/ArgumentResolver/MergeRequestArgumentValueResolver.php
+
+		-
+			message: '#^Property App\\ArgumentResolver\\MergeRequestArgumentValueResolver\:\:\$serializer has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/ArgumentResolver/MergeRequestArgumentValueResolver.php
+
+		-
+			message: '#^Method App\\ArgumentResolver\\PersistentEntityArgumentValueResolverHelper\:\:deserializeAndPersist\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php
+
+		-
+			message: '#^Method App\\ArgumentResolver\\PersistentEntityArgumentValueResolverHelper\:\:deserializeAndPersist\(\) has parameter \$context with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php
+
+		-
+			message: '#^Method App\\ArgumentResolver\\PersistentEntityArgumentValueResolverHelper\:\:persist\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php
+
+		-
+			message: '#^Method App\\ArgumentResolver\\PersistentEntityArgumentValueResolverHelper\:\:persist\(\) has parameter \$entity with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php
+
+		-
+			message: '#^Property App\\ArgumentResolver\\PersistentEntityArgumentValueResolverHelper\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php
+
+		-
+			message: '#^Property App\\ArgumentResolver\\PersistentEntityArgumentValueResolverHelper\:\:\$serializer has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/ArgumentResolver/PersistentEntityArgumentValueResolverHelper.php
+
+		-
+			message: '#^Property App\\Command\\AuthorBlacklistSyncCommand\:\:\$authorBlacklistRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorBlacklistSyncCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorBlacklistSyncCommand\:\:\$authorRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorBlacklistSyncCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorBlacklistSyncCommand\:\:\$client has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorBlacklistSyncCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorBlacklistSyncCommand\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorBlacklistSyncCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorBlacklistSyncCommand\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorBlacklistSyncCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorInconsistenciesCommand\:\:\$authorRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorInconsistenciesCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorInconsistenciesCommand\:\:\$client has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorInconsistenciesCommand.php
+
+		-
+			message: '#^Method App\\Command\\AuthorSyncCommand\:\:configure\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Command/AuthorSyncCommand.php
+
+		-
+			message: '#^Property App\\Command\\AuthorSyncCommand\:\:\$authorService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/AuthorSyncCommand.php
+
+		-
+			message: '#^Method App\\Command\\ProjectSetupCommand\:\:createProject\(\) has parameter \$rawProject with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Method App\\Command\\ProjectSetupCommand\:\:processRawProjects\(\) has parameter \$rawProjects with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$client has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$projectFactory has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$projectRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$reviewRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\ProjectSetupCommand\:\:\$webhookService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/ProjectSetupCommand.php
+
+		-
+			message: '#^Property App\\Command\\WebhookCreateCommand\:\:\$webhookService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Command/WebhookCreateCommand.php
+
+		-
+			message: '#^Class App\\Constant\\MergeRequest\\Action extends generic class MyCLabs\\Enum\\Enum but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Constant/MergeRequest/Action.php
+
+		-
+			message: '#^Class App\\Constant\\MergeRequest\\MergeStatus extends generic class MyCLabs\\Enum\\Enum but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Constant/MergeRequest/MergeStatus.php
+
+		-
+			message: '#^Class App\\Constant\\MergeRequest\\State extends generic class MyCLabs\\Enum\\Enum but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Constant/MergeRequest/State.php
+
+		-
+			message: '#^Class App\\Constant\\Note\\Approval extends generic class MyCLabs\\Enum\\Enum but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Constant/Note/Approval.php
+
+		-
+			message: '#^Class App\\Constant\\Review\\Status extends generic class MyCLabs\\Enum\\Enum but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Constant/Review/Status.php
+
+		-
+			message: '#^Method App\\Entity\\Author\:\:getComments\(\) return type with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types\: TKey, T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Method App\\Entity\\Author\:\:getReviews\(\) return type with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types\: TKey, T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$authorBlacklist has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$chatUsername has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$comments has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$email has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$reviews has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Property App\\Entity\\Author\:\:\$username has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Author.php
+
+		-
+			message: '#^Method App\\Entity\\AuthorBlacklist\:\:setBanned\(\) has parameter \$banned with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/AuthorBlacklist.php
+
+		-
+			message: '#^Property App\\Entity\\AuthorBlacklist\:\:\$author has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/AuthorBlacklist.php
+
+		-
+			message: '#^Property App\\Entity\\AuthorBlacklist\:\:\$banned has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/AuthorBlacklist.php
+
+		-
+			message: '#^Property App\\Entity\\AuthorBlacklist\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/AuthorBlacklist.php
+
+		-
+			message: '#^Property App\\Entity\\AuthorBlacklist\:\:\$id is never written, only read\.$#'
+			identifier: property.onlyRead
+			count: 1
+			path: src/Entity/AuthorBlacklist.php
+
+		-
+			message: '#^Method App\\Entity\\Comment\:\:setId\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$author has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$mergeRequest has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$note has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$project has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Comment\:\:\$review has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Comment.php
+
+		-
+			message: '#^Property App\\Entity\\Event\\EventObject\:\:\$objectKind has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Event/EventObject.php
+
+		-
+			message: '#^Method App\\Entity\\Event\\EventObjectAttributes\:\:setId\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Entity/Event/EventObjectAttributes.php
+
+		-
+			message: '#^Method App\\Entity\\Event\\EventObjectAttributes\:\:setId\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/Event/EventObjectAttributes.php
+
+		-
+			message: '#^Property App\\Entity\\Event\\EventObjectAttributes\:\:\$authorId has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Event/EventObjectAttributes.php
+
+		-
+			message: '#^Property App\\Entity\\Event\\EventObjectAttributes\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Event/EventObjectAttributes.php
+
+		-
+			message: '#^Property App\\Entity\\Event\\EventObjectAttributes\:\:\$note has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Event/EventObjectAttributes.php
+
+		-
+			message: '#^Property App\\Entity\\Event\\EventObjectAttributes\:\:\$projectId has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Event/EventObjectAttributes.php
+
+		-
+			message: '#^Method App\\Entity\\MergeRequest\:\:getIid\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Method App\\Entity\\MergeRequest\:\:setAction\(\) has parameter \$action with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Method App\\Entity\\MergeRequest\:\:setDescription\(\) has parameter \$description with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Method App\\Entity\\MergeRequest\:\:setId\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Method App\\Entity\\MergeRequest\:\:setId\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Method App\\Entity\\MergeRequest\:\:setIid\(\) has parameter \$iid with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$action has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$author has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$description has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$iid has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$mergeStatus has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$project has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$review has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$state has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Property App\\Entity\\MergeRequest\:\:\$url has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/MergeRequest.php
+
+		-
+			message: '#^Method App\\Entity\\Project\:\:setId\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Entity/Project.php
+
+		-
+			message: '#^Property App\\Entity\\Project\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Project.php
+
+		-
+			message: '#^Property App\\Entity\\Project\:\:\$homepage has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Project.php
+
+		-
+			message: '#^Property App\\Entity\\Project\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Project.php
+
+		-
+			message: '#^Property App\\Entity\\RequestLog\:\:\$body has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/RequestLog.php
+
+		-
+			message: '#^Property App\\Entity\\RequestLog\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/RequestLog.php
+
+		-
+			message: '#^Property App\\Entity\\RequestLog\:\:\$headers has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/RequestLog.php
+
+		-
+			message: '#^Property App\\Entity\\RequestLog\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/RequestLog.php
+
+		-
+			message: '#^Property App\\Entity\\RequestLog\:\:\$id is never written, only read\.$#'
+			identifier: property.onlyRead
+			count: 1
+			path: src/Entity/RequestLog.php
+
+		-
+			message: '#^Property App\\Entity\\RequestLog\:\:\$method has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/RequestLog.php
+
+		-
+			message: '#^Method App\\Entity\\Review\:\:getComments\(\) return type with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types\: TKey, T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Method App\\Entity\\Review\:\:getReviewers\(\) return type with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types\: TKey, T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$approvalCount has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$comments has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$id is never written, only read\.$#'
+			identifier: property.onlyRead
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$mergeRequest has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$project has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$reviewers has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$scope has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Review\:\:\$status has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Review.php
+
+		-
+			message: '#^Property App\\Entity\\Scope\:\:\$createdAt has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Scope.php
+
+		-
+			message: '#^Property App\\Entity\\Scope\:\:\$id has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Scope.php
+
+		-
+			message: '#^Property App\\Entity\\Scope\:\:\$id is never written, only read\.$#'
+			identifier: property.onlyRead
+			count: 1
+			path: src/Entity/Scope.php
+
+		-
+			message: '#^Property App\\Entity\\Scope\:\:\$name has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Entity/Scope.php
+
+		-
+			message: '#^Method App\\EventListener\\RequestLogEventListener\:\:getSubscribedEvents\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/EventListener/RequestLogEventListener.php
+
+		-
+			message: '#^Property App\\EventListener\\RequestLogEventListener\:\:\$requestLogService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/EventListener/RequestLogEventListener.php
+
+		-
+			message: '#^Method App\\Factory\\AuthorFactory\:\:create\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Factory/AuthorFactory.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorBlacklistRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorBlacklistRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorBlacklistRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorBlacklistRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorBlacklistRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorBlacklistRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorBlacklistRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorBlacklistRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Class App\\Repository\\AuthorRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:fetchPotentialAuthors\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:fetchPotentialAuthors\(\) has parameter \$allowedAuthorIds with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:fetchPotentialAuthors\(\) has parameter \$ignoredAuthorIds with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:findAllNotAlreadyBlacklisted\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:findReviewers\(\) has parameter \$allowedAuthorIds with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:findReviewers\(\) has parameter \$requiredAuthorIds with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:findReviewers\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Method App\\Repository\\AuthorRepository\:\:getAuthorsThatNeedToBeIgnored\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/AuthorRepository.php
+
+		-
+			message: '#^Class App\\Repository\\CommentRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/CommentRepository.php
+
+		-
+			message: '#^Class App\\Repository\\CommentRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/CommentRepository.php
+
+		-
+			message: '#^Class App\\Repository\\CommentRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/CommentRepository.php
+
+		-
+			message: '#^Class App\\Repository\\CommentRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/CommentRepository.php
+
+		-
+			message: '#^Class App\\Repository\\MergeRequestRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/MergeRequestRepository.php
+
+		-
+			message: '#^Class App\\Repository\\MergeRequestRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/MergeRequestRepository.php
+
+		-
+			message: '#^Class App\\Repository\\MergeRequestRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/MergeRequestRepository.php
+
+		-
+			message: '#^Class App\\Repository\\MergeRequestRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/MergeRequestRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ProjectRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ProjectRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ProjectRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ProjectRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ProjectRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ProjectRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ProjectRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ProjectRepository.php
+
+		-
+			message: '#^Class App\\Repository\\RequestLogRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/RequestLogRepository.php
+
+		-
+			message: '#^Class App\\Repository\\RequestLogRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/RequestLogRepository.php
+
+		-
+			message: '#^Class App\\Repository\\RequestLogRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/RequestLogRepository.php
+
+		-
+			message: '#^Class App\\Repository\\RequestLogRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/RequestLogRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ReviewRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ReviewRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ReviewRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ReviewRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ReviewRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ReviewRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ReviewRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ReviewRepository.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$reviewStatus$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Repository/ReviewRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ScopeRepository has PHPDoc tag @method for method findBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ScopeRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ScopeRepository has PHPDoc tag @method for method findBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ScopeRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ScopeRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#1 \$criteria with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ScopeRepository.php
+
+		-
+			message: '#^Class App\\Repository\\ScopeRepository has PHPDoc tag @method for method findOneBy\(\) parameter \#2 \$orderBy with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ScopeRepository.php
+
+		-
+			message: '#^Method App\\Repository\\ScopeRepository\:\:getAllLongestNameFirst\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Repository/ScopeRepository.php
+
+		-
+			message: '#^Method App\\Service\\AuthorService\:\:fetchGroupByScope\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Method App\\Service\\AuthorService\:\:fetchReviewerIdsByReviewComment\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Method App\\Service\\AuthorService\:\:fetchReviewerIdsByScope\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Method App\\Service\\AuthorService\:\:findReviewers\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Method App\\Service\\AuthorService\:\:syncReviewersByScope\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Negated boolean expression is always false\.$#'
+			identifier: booleanNot.alwaysFalse
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Property App\\Service\\AuthorService\:\:\$authorFactory has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Property App\\Service\\AuthorService\:\:\$authorRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Property App\\Service\\AuthorService\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Property App\\Service\\AuthorService\:\:\$gitlabService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Property App\\Service\\AuthorService\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/AuthorService.php
+
+		-
+			message: '#^Property App\\Service\\ChatService\:\:\$authorRepository is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: src/Service/ChatService.php
+
+		-
+			message: '#^Method App\\Service\\CommentService\:\:__construct\(\) has parameter \$noteProcessors with no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/CommentService.php
+
+		-
+			message: '#^Method App\\Service\\GitlabService\:\:createWebhook\(\) has parameter \$parameters with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Method App\\Service\\GitlabService\:\:fetchMembersByGroupId\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Method App\\Service\\GitlabService\:\:fetchMembersByUsername\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Method App\\Service\\GitlabService\:\:fetchWebhooks\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Method App\\Service\\GitlabService\:\:findAllGroupsByName\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Property App\\Service\\GitlabService\:\:\$client has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Property App\\Service\\GitlabService\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/GitlabService.php
+
+		-
+			message: '#^Method App\\Service\\GroupService\:\:fetchReviewGroups\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Service/GroupService.php
+
+		-
+			message: '#^Property App\\Service\\GroupService\:\:\$gitlabClient has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/GroupService.php
+
+		-
+			message: '#^Property App\\Service\\GroupService\:\:\$gitlabClient is never read, only written\.$#'
+			identifier: property.onlyWritten
+			count: 1
+			path: src/Service/GroupService.php
+
+		-
+			message: '#^Property App\\Service\\MergeRequestProcessor\\ReviewRequestProcessor\:\:\$reviewService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/MergeRequestProcessor/ReviewRequestProcessor.php
+
+		-
+			message: '#^Property App\\Service\\MergeRequestProcessor\\ReviewRequestProcessor\:\:\$scopeService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/MergeRequestProcessor/ReviewRequestProcessor.php
+
+		-
+			message: '#^Method App\\Service\\MergeRequestService\:\:__construct\(\) has parameter \$mergeRequestProcessors with no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/MergeRequestService.php
+
+		-
+			message: '#^Property App\\Service\\MergeRequestService\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/MergeRequestService.php
+
+		-
+			message: '#^Property App\\Service\\MergeRequestService\:\:\$mergeRequestRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/MergeRequestService.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\CatchAllNoteProcessor\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/CatchAllNoteProcessor.php
+
+		-
+			message: '#^Offset 1 on array\{list\<string\>, list\<non\-empty\-string\>\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: src/Service/NoteProcessor/PingAuthorNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewRequestNoteProcessor\:\:\$chatService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewRequestNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewRequestNoteProcessor\:\:\$gitlabService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewRequestNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewRequestNoteProcessor\:\:\$reviewService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewRequestNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewRequestNoteProcessor\:\:\$scopeService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewRequestNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewScopeReassignNoteProcessor\:\:\$chatService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewScopeReassignNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewScopeReassignNoteProcessor\:\:\$reviewService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewScopeReassignNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\NoteProcessor\\ReviewScopeReassignNoteProcessor\:\:\$scopeService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/NoteProcessor/ReviewScopeReassignNoteProcessor.php
+
+		-
+			message: '#^Property App\\Service\\RequestLogService\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/RequestLogService.php
+
+		-
+			message: '#^Property App\\Service\\RequestLogService\:\:\$isRequestLoggingEnabled has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/RequestLogService.php
+
+		-
+			message: '#^Method App\\Service\\ReviewService\:\:notifyAboutPing\(\) has parameter \$pingedUsernames with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Method App\\Service\\ReviewService\:\:notifyWithErrorLogging\(\) has parameter \$reviewer with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$authorService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$chatService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$entityManager has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$gitlabService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$reviewRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ReviewService\:\:\$scopeToNumberOfReviewersMapper has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ReviewService.php
+
+		-
+			message: '#^Property App\\Service\\ScopeService\:\:\$scopeRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/ScopeService.php
+
+		-
+			message: '#^Method App\\Service\\WebhookService\:\:createForProject\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Service/WebhookService.php
+
+		-
+			message: '#^Method App\\Service\\WebhookService\:\:getWebhookRoutes\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/WebhookService.php
+
+		-
+			message: '#^Method App\\Service\\WebhookService\:\:updateWebhooks\(\) has parameter \$routes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Service/WebhookService.php
+
+		-
+			message: '#^Property App\\Service\\WebhookService\:\:\$gitlabService has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/WebhookService.php
+
+		-
+			message: '#^Property App\\Service\\WebhookService\:\:\$logger has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/WebhookService.php
+
+		-
+			message: '#^Property App\\Service\\WebhookService\:\:\$projectRepository has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/WebhookService.php
+
+		-
+			message: '#^Property App\\Service\\WebhookService\:\:\$router has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Service/WebhookService.php

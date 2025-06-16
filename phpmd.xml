@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<ruleset name="Custom PHPMD Ruleset"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+    <description>Custom PHPMD rules for Symfony project</description>
+
+    <!-- Clean Code Rules -->
+    <rule ref="rulesets/cleancode.xml">
+        <!-- Allow boolean flag arguments for Symfony services and commands -->
+        <exclude name="BooleanArgumentFlag"/>
+        <!-- Allow else expressions for guard clauses -->
+        <exclude name="ElseExpression"/>
+        <!-- Allow static access for Symfony's static helpers -->
+        <exclude name="StaticAccess"/>
+    </rule>
+
+    <!-- Code Size Rules -->
+    <rule ref="rulesets/codesize.xml">
+        <!-- Exclude complexity rules that might be too strict for Symfony controllers -->
+        <exclude name="CyclomaticComplexity"/>
+        <exclude name="NPathComplexity"/>
+        <exclude name="ExcessiveClassComplexity"/>
+    </rule>
+
+    <!-- Custom Code Size Rules with Symfony-friendly limits -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="15"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/NPathComplexity">
+        <properties>
+            <property name="minimum" value="250"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+        <properties>
+            <property name="maximum" value="60"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
+        <properties>
+            <property name="minimum" value="150"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/ExcessiveParameterList">
+        <properties>
+            <property name="minimum" value="8"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/TooManyFields">
+        <properties>
+            <property name="maxfields" value="20"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/codesize.xml/TooManyMethods">
+        <properties>
+            <property name="maxmethods" value="30"/>
+        </properties>
+    </rule>
+
+    <!-- Controversial Rules -->
+    <rule ref="rulesets/controversial.xml">
+        <!-- Allow superglobals for Symfony applications -->
+        <exclude name="Superglobals"/>
+        <!-- Allow camelCase for Symfony naming conventions -->
+        <exclude name="CamelCaseClassName"/>
+        <exclude name="CamelCasePropertyName"/>
+        <exclude name="CamelCaseMethodName"/>
+        <exclude name="CamelCaseParameterName"/>
+        <exclude name="CamelCaseVariableName"/>
+    </rule>
+
+    <!-- Design Rules -->
+    <rule ref="rulesets/design.xml">
+        <!-- Allow coupling for Symfony dependency injection -->
+        <exclude name="CouplingBetweenObjects"/>
+        <!-- Allow depth for nested Symfony configurations -->
+        <exclude name="DepthOfInheritance"/>
+    </rule>
+
+    <!-- Custom Design Rules with adjusted limits -->
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="maximum" value="20"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/design.xml/DepthOfInheritance">
+        <properties>
+            <property name="minimum" value="8"/>
+        </properties>
+    </rule>
+
+    <!-- Naming Rules -->
+    <rule ref="rulesets/naming.xml">
+        <!-- Exclude rules that conflict with Symfony conventions -->
+        <exclude name="ShortVariable"/>
+        <exclude name="LongVariable"/>
+        <exclude name="ShortMethodName"/>
+        <exclude name="ConstructorWithNameAsEnclosingClass"/>
+        <exclude name="ConstantNamingConventions"/>
+        <exclude name="BooleanGetMethodName"/>
+    </rule>
+
+    <!-- Custom Naming Rules -->
+    <rule ref="rulesets/naming.xml/ShortVariable">
+        <properties>
+            <property name="minimum" value="2"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/LongVariable">
+        <properties>
+            <property name="maximum" value="30"/>
+        </properties>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/ShortMethodName">
+        <properties>
+            <property name="minimum" value="2"/>
+        </properties>
+    </rule>
+
+    <!-- Unused Code Rules -->
+    <rule ref="rulesets/unusedcode.xml">
+        <!-- Allow unused formal parameters for interface implementations -->
+        <exclude name="UnusedFormalParameter"/>
+    </rule>
+
+    <!-- Custom rule for unused parameters with Symfony context -->
+    <rule ref="rulesets/unusedcode.xml/UnusedFormalParameter">
+        <properties>
+            <property name="checkNotifySuperglobals" value="true"/>
+        </properties>
+    </rule>
+
+</ruleset>
