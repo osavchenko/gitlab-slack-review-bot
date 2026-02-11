@@ -67,6 +67,12 @@ class GitlabService
 
         try {
             $this->client->mergeRequests()->addNote($project->getId(), $mergeRequest->getIid(), $body);
+
+            $mr = $this->client->mergeRequests()->show($project->getId(), $mergeRequest->getIid());
+            $existingReviewerIds = array_column($mr['reviewers'] ?? [], 'id');
+            $this->client->mergeRequests()->update($project->getId(), $mergeRequest->getIid(), [
+                'reviewer_ids' => array_unique(array_merge($existingReviewerIds, [$author->getId()])),
+            ]);
         } catch (Exception $exception) {
             $this->logger->error('Failed to notify gitlab, system user does not have permissions', ['exception' => $exception]);
         }
