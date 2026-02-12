@@ -11,14 +11,14 @@ use Symfony\Component\HttpKernel\KernelEvents;
 
 class RequestLogEventListener implements EventSubscriberInterface
 {
-    private $requestLogService;
+    private RequestLogService $requestLogService;
 
     public function __construct(RequestLogService $requestLogService)
     {
         $this->requestLogService = $requestLogService;
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return [
             KernelEvents::REQUEST => [

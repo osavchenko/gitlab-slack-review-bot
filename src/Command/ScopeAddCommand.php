@@ -10,21 +10,19 @@ use App\Service\ReviewService;
 use App\Service\ScopeService;
 use Doctrine\ORM\EntityManagerInterface;
 use RuntimeException;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 
+#[AsCommand(name: 'app:scope:add')]
 class ScopeAddCommand extends Command
 {
     private const MANDATORY_PREFIX = '@';
 
-    protected static $defaultName = 'app:scope:add';
-
     private ScopeFactory $scopeFactory;
-
     private EntityManagerInterface $entityManager;
-
     private ScopeRepository $scopeRepository;
 
     public function __construct(
@@ -32,14 +30,14 @@ class ScopeAddCommand extends Command
         EntityManagerInterface $entityManager,
         ScopeRepository $scopeRepository
     ) {
-        parent::__construct(null);
+        parent::__construct();
 
         $this->scopeFactory = $scopeFactory;
         $this->entityManager = $entityManager;
         $this->scopeRepository = $scopeRepository;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $helper = $this->getHelper('question');
         $question = new Question('Please enter scope name:' . PHP_EOL);

@@ -2,8 +2,8 @@
 
 export TERM=xterm
 
-/etc/init.d/php7.4-fpm start &
-/usr/local/bin/docker-entrypoint.sh mysqld &
+/etc/init.d/php8.3-fpm start &
+/usr/local/bin/docker-entrypoint.sh mariadbd &
 /etc/init.d/nginx start &
 
 screen -dmS 'doctrine-database-create' bash -c 'until php /var/www/bin/console --no-interaction doctrine:database:create; do echo Unsuccessful; done'

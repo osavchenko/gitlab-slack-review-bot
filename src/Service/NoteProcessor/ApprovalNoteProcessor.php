@@ -9,8 +9,8 @@ use App\Constant\Review\Status;
 use App\Entity\Comment;
 use App\Entity\Review;
 use App\Service\ReviewService;
-use Doctrine\DBAL\LockMode;
 use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\LockMode;
 use Exception;
 use Psr\Log\LoggerInterface;
 

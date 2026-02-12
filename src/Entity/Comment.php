@@ -6,46 +6,32 @@ use App\Entity\Traits\TimestampableEntity;
 use App\Repository\CommentRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=CommentRepository::class)
- * @ORM\HasLifecycleCallbacks()
- */
+#[ORM\Entity(repositoryClass: CommentRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Comment
 {
     use TimestampableEntity;
 
-    /**
-     * @ORM\Id()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @ORM\Column(type="text")
-     */
+    #[ORM\Column(type: 'text')]
     private $note;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=MergeRequest::class, cascade={"persist"})
-     * @ORM\JoinColumn(nullable=true)
-     */
+    #[ORM\ManyToOne(targetEntity: MergeRequest::class, cascade: ['persist'])]
+    #[ORM\JoinColumn(nullable: true)]
     private $mergeRequest;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Project::class, cascade={"persist"})
-     * @ORM\JoinColumn(nullable=true)
-     */
+    #[ORM\ManyToOne(targetEntity: Project::class, cascade: ['persist'])]
+    #[ORM\JoinColumn(nullable: true)]
     private $project;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Author::class, cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
-     */
+    #[ORM\ManyToOne(targetEntity: Author::class, inversedBy: 'comments', cascade: ['persist'])]
+    #[ORM\JoinColumn(nullable: false)]
     private $author;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Review::class, inversedBy="comments")
-     */
+    #[ORM\ManyToOne(targetEntity: Review::class, inversedBy: 'comments')]
     private $review;
 
     public function getId(): ?int

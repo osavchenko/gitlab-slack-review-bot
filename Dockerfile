@@ -1,8 +1,10 @@
 FROM mariadb
 
-ENV COMPOSER_ALLOW_SUPERUSER 1
-ENV PERFORMANCE_OPTIM false
-ENV MYSQL_ROOT_PASSWORD root_db_password
+ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV PERFORMANCE_OPTIM=false
+ENV MYSQL_ROOT_PASSWORD=root_db_password
+
+WORKDIR /var/www
 
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends ca-certificates
@@ -14,14 +16,14 @@ RUN apt-get -qq update && DEBIAN_FRONTEND=noninteractive apt-get -y install \
     nginx \
     wget \
     unzip \
-    php7.4 \
-    php7.4-cli \
-    php7.4-intl \
-    php7.4-fpm \
-    php7.4-xml \
-    php7.4-mbstring \
-    php7.4-mysql \
-    php7.4-curl &&\
+    php8.3 \
+    php8.3-cli \
+    php8.3-intl \
+    php8.3-fpm \
+    php8.3-xml \
+    php8.3-mbstring \
+    php8.3-mysql \
+    php8.3-curl &&\
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* &&\
     php -r "readfile('https://getcomposer.org/installer');" | php -- \

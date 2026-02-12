@@ -9,56 +9,38 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=ReviewRepository::class)
- * @ORM\HasLifecycleCallbacks()
- */
+#[ORM\Entity(repositoryClass: ReviewRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Review
 {
     use TimestampableEntity;
 
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @ORM\OneToOne(targetEntity=MergeRequest::class, inversedBy="review")
-     * @ORM\JoinColumn(nullable=false)
-     */
+    #[ORM\OneToOne(targetEntity: MergeRequest::class, inversedBy: 'review')]
+    #[ORM\JoinColumn(nullable: false)]
     private $mergeRequest;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Author::class, inversedBy="reviews")
-     */
+    #[ORM\ManyToMany(targetEntity: Author::class, inversedBy: 'reviews')]
     private $reviewers;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Project::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
+    #[ORM\ManyToOne(targetEntity: Project::class)]
+    #[ORM\JoinColumn(nullable: false)]
     private $project;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
+    #[ORM\Column(type: 'string', length: 255)]
     private $status;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $scope;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="review")
-     */
+    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'review')]
     private $comments;
 
-    /**
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Column(type: 'integer')]
     private $approvalCount;
 
     public function __construct()

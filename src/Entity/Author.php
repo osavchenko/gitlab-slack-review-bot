@@ -8,48 +8,32 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=AuthorRepository::class)
- * @ORM\HasLifecycleCallbacks()
- */
+#[ORM\Entity(repositoryClass: AuthorRepository::class)]
+#[ORM\HasLifecycleCallbacks]
 class Author
 {
     use TimestampableEntity;
 
-    /**
-     * @ORM\Id()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $email;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $username;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
     private $chatUsername;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Review::class, mappedBy="reviewers")
-     */
+    #[ORM\ManyToMany(targetEntity: Review::class, mappedBy: 'reviewers')]
     private $reviews;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Comment::class, mappedBy="author")
-     */
+    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'author')]
     private $comments;
 
-    /**
-     * @ORM\OneToOne(targetEntity=AuthorBlacklist::class, mappedBy="author", cascade={"persist"})
-     */
+    #[ORM\OneToOne(targetEntity: AuthorBlacklist::class, mappedBy: 'author', cascade: ['persist'])]
     private $authorBlacklist;
 
     public function __construct()

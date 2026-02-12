@@ -11,19 +11,18 @@ use App\Entity\Event\EventObjectAttributes;
 use App\Entity\MergeRequest;
 use App\Entity\Project;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\Serializer\Normalizer\UnwrappingDenormalizer;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class MergeRequestArgumentValueResolver implements ArgumentValueResolverInterface
+class MergeRequestArgumentValueResolver implements ValueResolverInterface
 {
     private const CONTEXT = [UnwrappingDenormalizer::UNWRAP_PATH => '[object_attributes]'];
     private const PROJECT_CONTEXT = [UnwrappingDenormalizer::UNWRAP_PATH => '[project]'];
 
-    private $serializer;
-
-    private $entityArgumentValueResolverHelper;
+    private SerializerInterface $serializer;
+    private PersistentEntityArgumentValueResolverHelper $entityArgumentValueResolverHelper;
 
     public function __construct(
         SerializerInterface $serializer,
@@ -33,20 +32,19 @@ class MergeRequestArgumentValueResolver implements ArgumentValueResolverInterfac
         $this->entityArgumentValueResolverHelper = $entityArgumentValueResolverHelper;
     }
 
-    public function supports(Request $request, ArgumentMetadata $argument)
+    public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
         if ($argument->getType() !== MergeRequest::class) {
-            return false;
+            return [];
         }
 
         /** @var EventObject $eventObject */
         $eventObject = $this->serializer->deserialize($request->getContent(), EventObject::class, 'json');
 
-        return $eventObject->getObjectKind() === ObjectKind::MERGE_REQUEST;
-    }
+        if ($eventObject->getObjectKind() !== ObjectKind::MERGE_REQUEST) {
+            return [];
+        }
 
-    public function resolve(Request $request, ArgumentMetadata $argument)
-    {
         $mergeRequest = $this->setMergeRequest($request);
         $this->setProject($request, $mergeRequest);
         $this->setAuthor($request, $mergeRequest);

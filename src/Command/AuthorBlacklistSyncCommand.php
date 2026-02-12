@@ -14,10 +14,12 @@ use Exception;
 use JoliCode\Slack\Api\Client;
 use JoliCode\Slack\Exception\SlackErrorResponse;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'app:blacklist:sync')]
 class AuthorBlacklistSyncCommand extends Command
 {
     private const STATUS_WHITELISTED = 'whitelisted';
@@ -33,17 +35,11 @@ class AuthorBlacklistSyncCommand extends Command
         ':palm_tree:',
     ];
 
-    protected static $defaultName = 'app:blacklist:sync';
-
-    private $client;
-
-    private $authorBlacklistRepository;
-
-    private $entityManager;
-
-    private $authorRepository;
-
-    private $logger;
+    private Client $client;
+    private AuthorBlacklistRepository $authorBlacklistRepository;
+    private EntityManagerInterface $entityManager;
+    private AuthorRepository $authorRepository;
+    private LoggerInterface $logger;
 
     public function __construct(
         Client $client,
@@ -52,7 +48,7 @@ class AuthorBlacklistSyncCommand extends Command
         EntityManagerInterface $entityManager,
         LoggerInterface $logger
     ) {
-        parent::__construct(null);
+        parent::__construct();
 
         $this->client = $client;
         $this->authorBlacklistRepository = $authorBlacklistRepository;
@@ -69,7 +65,7 @@ class AuthorBlacklistSyncCommand extends Command
 
         $this->entityManager->flush();
 
-        return 0;
+        return Command::SUCCESS;
     }
 
     protected function removeStaleBlacklists(): void

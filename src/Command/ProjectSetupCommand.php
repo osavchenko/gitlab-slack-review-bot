@@ -13,27 +13,21 @@ use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Gitlab\Client;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'app:project:setup')]
 class ProjectSetupCommand extends Command
 {
-    protected static $defaultName = 'app:project:setup';
-
-    private $client;
-
-    private $webhookService;
-
-    private $projectRepository;
-
-    private $entityManager;
-
-    private $projectFactory;
-
-    private $logger;
-
-    private $reviewRepository;
+    private Client $client;
+    private WebhookService $webhookService;
+    private ProjectRepository $projectRepository;
+    private EntityManagerInterface $entityManager;
+    private ProjectFactory $projectFactory;
+    private LoggerInterface $logger;
+    private ReviewRepository $reviewRepository;
 
     public function __construct(
         Client $client,
@@ -44,7 +38,7 @@ class ProjectSetupCommand extends Command
         ProjectFactory $projectFactory,
         LoggerInterface $logger
     ) {
-        parent::__construct(null);
+        parent::__construct();
 
         $this->client = $client;
         $this->webhookService = $webhookService;
@@ -55,7 +49,7 @@ class ProjectSetupCommand extends Command
         $this->logger = $logger;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $page = 1;
 
@@ -66,7 +60,7 @@ class ProjectSetupCommand extends Command
             $page++;
         } while (!empty($rawProjects));
 
-        return 0;
+        return Command::SUCCESS;
     }
 
     protected function processRawProjects(array $rawProjects): void

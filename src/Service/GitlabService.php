@@ -16,9 +16,8 @@ use Psr\Log\LoggerInterface;
 
 class GitlabService
 {
-    private $client;
-
-    private $logger;
+    private Client $client;
+    private LoggerInterface $logger;
 
     public function __construct(Client $client, LoggerInterface $logger)
     {

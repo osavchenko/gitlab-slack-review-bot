@@ -6,29 +6,28 @@ namespace App\Command;
 
 use App\Repository\AuthorRepository;
 use Gitlab\Client;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'app:author:inconsistencies')]
 class AuthorInconsistenciesCommand extends Command
 {
-    protected static $defaultName = 'app:author:inconsistencies';
-
-    private $client;
-
-    private $authorRepository;
+    private Client $client;
+    private AuthorRepository $authorRepository;
 
     public function __construct(
         Client $client,
         AuthorRepository $authorRepository
     ) {
-        parent::__construct(null);
+        parent::__construct();
 
         $this->client = $client;
         $this->authorRepository = $authorRepository;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $allAuthors = $this->authorRepository->findAll();
         foreach ($allAuthors as $author) {
@@ -45,7 +44,7 @@ class AuthorInconsistenciesCommand extends Command
             }
         }
 
-        return 0;
+        return Command::SUCCESS;
     }
 }
 

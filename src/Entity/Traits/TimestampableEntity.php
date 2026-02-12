@@ -5,21 +5,14 @@ declare(strict_types=1);
 namespace App\Entity\Traits;
 
 use DateTime;
+use Doctrine\ORM\Mapping as ORM;
 
 trait TimestampableEntity
 {
-    /**
-     * @var DateTime $created
-     *
-     * @ORM\Column(type="datetime")
-     */
+    #[ORM\Column(type: 'datetime')]
     private $createdAt;
 
-    /**
-     * @var DateTime $updatedAt
-     *
-     * @ORM\Column(type="datetime")
-     */
+    #[ORM\Column(type: 'datetime')]
     private $updatedAt;
 
     public function getCreatedAt(): ?DateTime
@@ -46,10 +39,8 @@ trait TimestampableEntity
         return $this;
     }
 
-    /**
-     * @ORM\PrePersist
-     * @ORM\PreUpdate
-     */
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
     public function updateTimestamps(): void
     {
         $this->setUpdatedAt(new DateTime('now'));

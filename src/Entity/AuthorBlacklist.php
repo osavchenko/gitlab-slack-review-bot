@@ -5,27 +5,19 @@ namespace App\Entity;
 use App\Repository\AuthorBlacklistRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=AuthorBlacklistRepository::class)
- */
+#[ORM\Entity(repositoryClass: AuthorBlacklistRepository::class)]
 class AuthorBlacklist
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+    #[ORM\Id]
+    #[ORM\GeneratedValue]
+    #[ORM\Column(type: 'integer')]
     private $id;
 
-    /**
-     * @ORM\OneToOne(targetEntity=Author::class, inversedBy="authorBlacklist", cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
-     */
+    #[ORM\OneToOne(targetEntity: Author::class, inversedBy: 'authorBlacklist', cascade: ['persist'])]
+    #[ORM\JoinColumn(nullable: false)]
     private $author;
 
-    /**
-     * @ORM\Column(type="boolean")
-     */
+    #[ORM\Column(type: 'boolean')]
     private $banned;
 
     public function getId(): ?int

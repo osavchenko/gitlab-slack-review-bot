@@ -13,12 +13,12 @@ use App\Entity\Event\EventObjectAttributes;
 use App\Entity\MergeRequest;
 use App\Entity\Project;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpKernel\Controller\ArgumentValueResolverInterface;
+use Symfony\Component\HttpKernel\Controller\ValueResolverInterface;
 use Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadata;
 use Symfony\Component\Serializer\Normalizer\UnwrappingDenormalizer;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class CommentArgumentValueResolver implements ArgumentValueResolverInterface
+class CommentArgumentValueResolver implements ValueResolverInterface
 {
     private const CONTEXT = [UnwrappingDenormalizer::UNWRAP_PATH => '[object_attributes]'];
     private const MERGE_REQUEST_CONTEXT = [UnwrappingDenormalizer::UNWRAP_PATH => '[merge_request]'];
@@ -26,9 +26,8 @@ class CommentArgumentValueResolver implements ArgumentValueResolverInterface
     private const USER_CONTEXT = [UnwrappingDenormalizer::UNWRAP_PATH => '[user]'];
     private const SPECIAL_KEYWORD_REDACTED = 'redacted';
 
-    private $serializer;
-
-    private $entityArgumentValueResolverHelper;
+    private SerializerInterface $serializer;
+    private PersistentEntityArgumentValueResolverHelper $entityArgumentValueResolverHelper;
 
     public function __construct(
         SerializerInterface $serializer,
@@ -38,20 +37,19 @@ class CommentArgumentValueResolver implements ArgumentValueResolverInterface
         $this->entityArgumentValueResolverHelper = $entityArgumentValueResolverHelper;
     }
 
-    public function supports(Request $request, ArgumentMetadata $argument)
+    public function resolve(Request $request, ArgumentMetadata $argument): iterable
     {
         if ($argument->getType() !== Comment::class) {
-            return false;
+            return [];
         }
 
         /** @var EventObject $eventObject */
         $eventObject = $this->serializer->deserialize($request->getContent(), EventObject::class, 'json');
 
-        return $eventObject->getObjectKind() === ObjectKind::NOTE;
-    }
+        if ($eventObject->getObjectKind() !== ObjectKind::NOTE) {
+            return [];
+        }
 
-    public function resolve(Request $request, ArgumentMetadata $argument)
-    {
         $comment = $this->setComment($request);
         $this->setCommentAuthor($request, $comment);
 

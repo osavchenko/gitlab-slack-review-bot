@@ -13,13 +13,10 @@ use Symfony\Component\Routing\RouterInterface;
 
 class WebhookService
 {
-    private $projectRepository;
-
-    private $gitlabService;
-
-    private $router;
-
-    private $logger;
+    private ProjectRepository $projectRepository;
+    private GitlabService $gitlabService;
+    private RouterInterface $router;
+    private LoggerInterface $logger;
 
     public function __construct(
         ProjectRepository $projectRepository,
